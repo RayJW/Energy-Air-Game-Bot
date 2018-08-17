@@ -37,4 +37,5 @@ function Antwort(){
     ];
     var x = Frage();
     document.getElementById(answer[x]).checked = true;
+       document.getElementById("next-question").click();
 }
