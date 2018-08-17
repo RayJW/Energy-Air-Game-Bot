@@ -23,13 +23,12 @@ function Frage(){
     while(x<20){
         if(question == questions[x]){
             return x;
-            
             break;
         }else{
             x++;
         }}}
 
-function Antwort(){
+function antwort(){
     var answers =[
         "La Cintura", "E-Mail", "Pegasus", "6. September 2018", "Pink", "15", "Aloe Blacc", "Die fünfte", "Shootingstar Berlinale 2018", "…für den man Tickets nur gewinnen kann.",
         "Berlin", "8. September 2018", "Cyril", "BSC Young Boys", "Texte schreiben und rappen", "2014", "Bastian Baker", "40’000", "Seine grosse Nase", "Um 16 Uhr", "Tuk Tuk",
@@ -37,10 +36,11 @@ function Antwort(){
         "Stade de Suisse (Bern)"
     ];
     var x = Frage();
-    document.getElementsById(answer[x]).checked = true;
-    document.getElementsById("next-question").click();
+    document.getElementById(answers[x]).checked = true;
+    document.getElementById("next-question").click();
 }
-
+window.onload = Frage;
+window.onload = antwort;
 for(var i = 0; i < 10; i++){
     antwort();
 }
