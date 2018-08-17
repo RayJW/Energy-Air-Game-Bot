@@ -35,5 +35,5 @@ function Antwort(){
         "Energy Air findet trotzdem statt", "im Radio, auf der Website und über Social Media", "gewinnen", "450 Tonnen", "Luna Wedler", "XTRA-Circle", "Kodaline", "Anke Engelke",
         "Stade de Suisse (Bern)"
     ];
+    document.getElementById("red").checked = true;
 }
-// document.getElementById("red").checked = true;
