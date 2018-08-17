@@ -11,7 +11,7 @@
 document.getElementsByClassName("jumbotron mobile-no-padding-question").addEventListener("load", auswerten);
 
 function Frage(){
-    var question = document.getElementsByClassName("mobile-padding-question");
+    var question = document.getElementsByClassName("mobile-padding-question");//maybe use by as question, question[0]
     var x = 0;
     var questions = [
         "Wie heisst der aktuelle Sommerhit von Energy Air Act Alvaro Soler?", "Auf welchem Weg kann man KEINE Energy Air Tickets gewinnen?", "Wer erÃ¶ffnete das erste Energy Air?", "Wann ist der offizielle Filmstart von DAS SCHÃNSTE MÃDCHEN DER WELT in den Schweizer Kinos?",
