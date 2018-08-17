@@ -39,3 +39,7 @@ function Antwort(){
     document.getElementById(answer[x]).checked = true;
        document.getElementById("next-question").click();
 }
+
+for(var i = 0; i < 10; i++){
+    antwort();
+}
