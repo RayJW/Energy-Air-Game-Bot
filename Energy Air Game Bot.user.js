@@ -3,7 +3,7 @@
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot/edit/master/Energy%20Air%20Game%20Bot.user.js
 // @version      0.1
 // @description  Automate the Energy Air Game
-// @author       RayJW
+// @author       RayJW | Svenwas3f | CedricHirschi
 // @match        https://game.energy.ch/
 // @grant        none
 // ==/UserScript==
