@@ -21,13 +21,10 @@ function quiz(){
         "Mit welchem dieser Tickets geniesst du die beste Sicht zur Energy Air BÃ¼hne?", "Wer war der letzte Act beim Energy Air 2017?", "Wer spielt die Mutter von Cyril?", "Wo findet das Energy Air statt?",
     ];
     while(x<20){
-        if(question == questions[x])
-        {return x;
-         break;}
-        else{return false;
-             x++;}}}
-
-
-
-while (){
-       function
+        if(question == questions[x]){
+             return x;
+             break;
+        }else{
+             x++;
+        }}}
+// document.getElementById("red").checked = true;
