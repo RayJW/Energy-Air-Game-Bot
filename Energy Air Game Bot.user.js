@@ -8,7 +8,6 @@
 // ==/UserScript==
 
 let someElement = document.getElementsByClassName("jumbotron mobile-no-padding-question")[0].addEventListener("load", final);
-window.alert("running all")
 
 function question() {
     var question = document.getElementsByClassName("mobile-padding-question");
@@ -22,7 +21,6 @@ function question() {
         "Wie schwer ist die Energy Air Bühne?", "Welcher Schweizer Shootingstar spielt in DAS SCHÖNSTE MÄDCHEN DER WELT die Hauptrolle?",
         "Mit welchem dieser Tickets geniesst du die beste Sicht zur Energy Air Bühne?", "Wer war der letzte Act beim Energy Air 2017?", "Wer spielt die Mutter von Cyril?", "Wo findet das Energy Air statt?",
     ];
-    window.alert("running question")
     while (x < 20) {
         if (question[x].innerHTML.trim() == questions[x]) {
             return x;
@@ -42,12 +40,9 @@ function answer() {
         "Stade de Suisse (Bern)"
     ];
     var x = question();
-    window.alert("running answer")
-    document.getElementById(answers[x]).checked = true;
-    document.getElementById("next-question").click();
+    document.getElementById(answers[x]).click();
 }
 function final() {
-    window.alert("running final")
     for (var i = 0; i < 10; i++) {
         answer();
     }
