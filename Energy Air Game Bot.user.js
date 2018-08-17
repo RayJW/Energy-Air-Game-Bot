@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+document.getElementsByClassName("jumbotron mobile-no-padding-question").addEventListener("load", auswerten());
+
 function Frage(){
     var question = document.getElementsByClassName("mobile-padding-question");
     var x = 0;
@@ -39,8 +41,7 @@ function antwort(){
     document.getElementById(answers[x]).checked = true;
     document.getElementById("next-question").click();
 }
-window.onload = Frage;
-window.onload = antwort;
-for(var i = 0; i < 10; i++){
-    antwort();
-}
+function auswerten(){
+    for(var i = 0; i < 10; i++){
+        antwort();
+    }}
