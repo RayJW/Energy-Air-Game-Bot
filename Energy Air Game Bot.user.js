@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 function Frage(){
-    var question = document.getElementByClassName("mobile-padding-question");
+    var question = document.getElementsByClassName("mobile-padding-question");
     var x = 0;
     var questions = [
         "Wie heisst der aktuelle Sommerhit von Energy Air Act Alvaro Soler?", "Auf welchem Weg kann man KEINE Energy Air Tickets gewinnen?", "Wer eröffnete das erste Energy Air?", "Wann ist der offizielle Filmstart von DAS SCHÖNSTE MÄDCHEN DER WELT in den Schweizer Kinos?",
@@ -23,6 +23,7 @@ function Frage(){
     while(x<20){
         if(question == questions[x]){
             return x;
+            
             break;
         }else{
             x++;
@@ -36,8 +37,8 @@ function Antwort(){
         "Stade de Suisse (Bern)"
     ];
     var x = Frage();
-    document.getElementById(answer[x]).checked = true;
-    document.getElementById("next-question").click();
+    document.getElementsById(answer[x]).checked = true;
+    document.getElementsById("next-question").click();
 }
 
 for(var i = 0; i < 10; i++){
