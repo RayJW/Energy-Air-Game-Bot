@@ -28,7 +28,7 @@ function answer() {
         "Aloe Blacc",
         "Die fünfte",
         "Shootingstar Berlinale 2018",
-        "für den man Tickets nur gewinnen kann.",
+        "…für den man Tickets nur gewinnen kann.",
         "Berlin",
         "8. September 2018",
         "Cyril",
