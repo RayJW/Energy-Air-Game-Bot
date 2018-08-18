@@ -13,7 +13,7 @@ window.addEventListener("load", initial);
 function initial(){
     for (var i = 0; i < 10; i++) {
         answer();
-                location.reload(); //Reload the page 
+            location.reload(); //Reload the page 
     }
 }
 
