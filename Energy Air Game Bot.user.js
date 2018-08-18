@@ -11,10 +11,8 @@
 window.addEventListener("load", answer);
 
 function initial(){
-    for (var i = 0; i < 10; i++) {
         answer();
             location.reload();
-    }
 }
 
 function answer() {
