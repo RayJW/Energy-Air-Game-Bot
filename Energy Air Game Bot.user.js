@@ -20,7 +20,7 @@ function initial(){
 function answer() {
 
     var answers = [
-        "La Cintura", "E-Mail", "Bastian Baker", "6. September 2018", "Pink", "15", "Aloe Blacc", "Die fünfte", "Shootingstar Berlinale 2018", "für den man Tickets nur gewinnen kann.",
+        "La Cintura", "E-Mail", "Bastian Baker", "6. September 2018", "Pink", "15", "Aloe Blacc", "Die fünfte", "Shootingstar Berlinale 2018", "...für den man Tickets nur gewinnen kann.",
         "Berlin", "8. September 2018", "Cyril", "BSC Young Boys", "Texte schreiben und rappen", "2014", "Bastian Baker", "40’000", "Seine grosse Nase", "Um 17 Uhr", "Tuk Tuk",
         "Energy Air findet trotzdem statt", "im Radio, auf der Website und über Social Media", "gewinnen", "450 Tonnen", "Luna Wedler", "XTRA-Circle", "Kodaline", "Anke Engelke",
         "Stade de Suisse (Bern)"
