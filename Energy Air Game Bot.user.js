@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Energy Air Game Bot
+// @name         Energy Air Game Bot eventlistener
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot
 // @version      0.1
 // @description  Automate the Energy Air Game
