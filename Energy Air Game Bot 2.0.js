@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+//De Button mit Jetzt Tickets für Energy Air gewinne! irgendwie aklicken
+
 window.addEventListener("load", total);
 
 
