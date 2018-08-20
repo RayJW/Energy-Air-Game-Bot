@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Energy Air Game Bot
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot
-// @version      0.2
+// @version      0.1
 // @description  Automate the Energy Air Game
 // @author       RayJW, Svenwas3f
 // @match        https://game.energy.ch/
@@ -10,42 +10,64 @@
 
 window.addEventListener("load", total);
 
-window.addEventListener("change", total);
+function next(){
+    var buttonEls = document.getElementsByClassName("btn btn-primary game-button game-button-slot")
+    var button = buttonEls[0].setAttribute("id", "next-step");
+    document.getElementById("next-step").click();
+}
 
 function answer() {
     var answers = [
         "La Cintura",
         "E-Mail",
         "Bastian Baker",
-        "6. September 2018",
-        "Pink",
         "15",
         "Aloe Blacc",
         "Die fünfte",
-        "Shootingstar Berlinale 2018",
         "…für den man Tickets nur gewinnen kann.",
-        "Berlin",
         "8. September 2018",
-        "Cyril",
         "BSC Young Boys",
-        "Texte schreiben und rappen",
         "2014",
         "Bastian Baker",
         "40’000",
-        "Seine grosse Nase",
         "Um 17 Uhr",
         "Tuk Tuk",
         "Energy Air findet trotzdem statt",
         "im Radio, auf der Website und über Social Media",
         "gewinnen",
         "450 Tonnen",
-        "Luna Wedler",
         "XTRA-Circle",
         "Kodaline",
-        "Anke Engelke",
-        "Stade de Suisse (Bern)"
+        "Stade de Suisse, Bern",
+        "70 Meter",
+        "Ab 30. August 2018",
+        "60",
+        "Dimitri Vegas & Like Mike",
+        "Deutschland",
+        "Zürich",
+        "Pegasus",
+        "Der Ex von Audrey (Mila Kunis)",
+        "Privatjet",
+        "Mila Kunis und Kate McKinnon",
+        "1300",
+        "Eine komplett weisse Garderobe",
+        "In der Körperöffnung",
+        "One Republic",
+        "Baba Shrimps",
+        "Bad Moms",
+        "Twitter",
+        "60",
+        "Energy Air – The Game",
+        "Einen USB-Stick mit vertraulichen Informationen",
+        "Sein Mami",
+        "Für Ingwer & Ewig",
+        "Ashton Kutscher",
+        "250",
+        "2014",
+        "Kodaline",
+        "Gamen"
     ];
-    var x = question()
+    var x = question();
     document.getElementById(answers[x]).click();
     document.getElementById("next-question").click();
 }
@@ -58,35 +80,53 @@ function question(){
         "Wie heisst der aktuelle Sommerhit von Energy Air Act Alvaro Soler?",
         "Auf welchem Weg kann man KEINE Energy Air Tickets gewinnen?",
         "Wer eröffnete das erste Energy Air?",
-        "Wann ist der offizielle Filmstart von DAS SCHÖNSTE MÄDCHEN DER WELT in den Schweizer Kinos?",
-        "Welche Farbe haben die Haare des Social Media Stars Julia Beautx im Film?",
         "Wie viele Acts waren beim letzten Energy Air dabei?",
         "Welcher dieser Acts hatte einen Auftritt am Energy Air 2017?",
         "Die wievielte Energy Air Ausgabe findet dieses Jahr statt?",
-        "Mit welchem Preis wurde der Nachwuchsstar Luna Wedler dieses Jahr ausgezeichnet?",
         "Energy Air ist der einzige Energy Event, …",
-        "Wohin führt die Klassenfahrt?",
         "Wann findet das Energy Air 2018 statt?",
-        "Welcher Schauspieler/Rapper trägt im Film eine goldene Maske?",
         "Welche Fussballmannschaft ist im Stade de Suisse zuhause?",
-        "Was ist Cyrils besondere Begabung?",
         "Wann fand Energy Air zum ersten Mal statt?",
         "Wer stand am letzten Energy Air als Überraschungsgast auf der Bühne?",
         "Wie viele Energy Air Tickets werden verlost?",
-        "Was ist Cyrils (Aaron Hilmer) Markenzeichen im Film?",
         "Wann beginnt das Energy Air 2018?",
         "Das NRJ-Gefährt ist ein…",
         "Was passiert, wenn es am Eventtag regnet?",
-        "Wo erfährst du immer die neusten Infos rund um Energy Air?",
+        "Wo erfährst du immer die neusten Infos rund um das Energy Air?",
         "Energy Air Tickets kann man…",
         "Wie schwer ist die Energy Air Bühne?",
-        "Welcher Schweizer Shootingstar spielt in DAS SCHÖNSTE MÄDCHEN DER WELT die Hauptrolle?",
         "Mit welchem dieser Tickets geniesst du die beste Sicht zur Energy Air Bühne?",
         "Wer war der letzte Act beim Energy Air 2017?",
-        "Wer spielt die Mutter von Cyril?",
-        "Wo findet das Energy Air statt?"
+        "Wo findet das Energy Air statt?",
+        "Wie breit ist die Energy Air Bühne?",
+        "Ab wann ist der Film BAD SPIES in den Schweizer Kinos zu sehen?",
+        "Wie viele Konfetti-Kanonen gibt es am Energy Air?",
+        "Welcher berühmte DJ-Act stand 2017 auf der Bühne des Energy Air?",
+        "Woher kommt Energy Air Act Max Giesinger?",
+        "In welcher Hauptstadt Europas machen die BAD SPIES keinen Halt?",
+        "Welcher Act stand beim ersten Energy Air 2014 und auch im letzten Jahr auf der Bühne?",
+        "Wessen Ex-Freund ist ein internationaler Spion?",
+        "Wie reiste Kygo im Jahr 2015 ans Energy Air?",
+        "Welches Agentenduo gibt ab dem 30. August so richtig Gas?",
+        "Wie viele Mitarbeiter sind am Energy Air im Einsatz?",
+        "Was verlangte Nena am Energy Air 2016?",
+        "Wo hat Audrey den USB-Stick versteckt?",
+        "Welche amerikanische Band trat am Energy Air 2016 auf?",
+        "Welcher Act interviewte vor dem letzten Energy Air das Publikum?",
+        "Aus welchem Film ist Mila Kunis bekannt?",
+        "Auf welcher Social-Media-Plattform kann man keine Energy Air Tickets gewinnen?",
+        "Wie viele Konfetti-Kanonen gibt es am Energy Air?",
+        "Auf welchem Portal kann ich zwei Kinotickets für den Film BAD SPIES gewinnen?",
+        "Was verstecken Audrey und Morgan vor der CIA?",
+        "Wen nahm Knackeboul am Energy Air 2014 mit backstage?",
+        "Welchen Song performte Dodo am Energy Air mit den Überraschungsgästen Lo & Leduc?",
+        "Mit welchem Hollywoodstar ist Mila Kunis verheiratet?",
+        "Wie viele Spotlights gibt es am Energy Air?",
+        "Wann fand das Energy Air zum ersten Mal statt?",
+        "Wer war der letzte Act am Energy Air 2017?",
+        "Was ist Audreys Lieblingsbeschäftigung?"
     ];
-    while (x < 30) {
+    while (x < 60) {
         if (question == questions[x]) {
             return x;
             break;
@@ -98,30 +138,24 @@ function question(){
 }
 
 function total(){
-    if(initial()){
-        var buttonEls = document.getElementsByClassName("btn btn-primary game-button game-button-slot")
-        var button = buttonEls[0].setAttribute("id", "next-step");
-        document.getElementById("next-step").click();
+    if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
+        if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
+            next()
+        }
+        else{
+        }
     }
     else{
-        location.reload()
-    }
-    function initial(){
-        var questionEls = document.getElementsByClassName("mobile-padding-question");
-        if(typeof(questionEls) != "undefined"){
-            var question = questionEls[1].innerText;
-            answer();
-            if (questionEls[0].innerText == "10 / 10"){
-                answer()
-                document.getElementsByClassName("btn btn-primary game-button game-button-slot")[0].click();
-                return true;
-            }
-            else{
-                answer()
-                return false;
-            }
-        }else{
-            questionEls = "";
+        var questionEls = document.getElementsByClassName("mobile-padding-question")
+        var question = questionEls[1].innerText;
+        answer();
+        if (questionEls[0].innerText == "10 / 10"){
+            answer()
+            setTimeout(next, 2000);
+        }
+        else{
+            answer()
+            location.reload();
         }
     }
 }
