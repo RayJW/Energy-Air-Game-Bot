@@ -144,6 +144,9 @@ function total(){
         document.getElementById("tryagain").click();
     }else{
         if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
+            if(document.getElementById("lose") != undefined){
+                document.getElementById("lose").click();
+            }
             if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
                 next()
             }
