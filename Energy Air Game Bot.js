@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Energy Air Game Bot
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot
-// @version      0.1
+// @version      1.0
 // @description  Automate the Energy Air Game
 // @author       RayJW, Svenwas3f
 // @match        https://game.energy.ch/
@@ -14,6 +14,14 @@ function next(){
     var buttonEls = document.getElementsByClassName("btn btn-primary game-button game-button-slot")
     var button = buttonEls[0].setAttribute("id", "next-step");
     document.getElementById("next-step").click();
+}
+
+function random(){
+    var x = Math.floor(Math.random() * 13)
+    var buttonEls = document.getElementsByTagName("img");
+    var button = buttonEls[x].setAttribute("id", "next-step");
+    document.getElementById("next-step").click();
+    location.reload();
 }
 
 function answer() {
@@ -137,34 +145,49 @@ function question(){
     }
 }
 
+function total() {
+    if(document.getElementsByClassName("mobile-padding-question") === undefined){
+        if(document.getElementsByClassName("circle col-xs-4 col-sm-3 col-md-4 col-lg-3") === undefined){
+            location.reload();
+        }else{
+            setTimeout(next(), 1000);
+            setTimeout(random, 1000);
+        }
+    }else{
+        var questionEls = document.getElementsByClassName("mobile-padding-question");
+        if (questionEls[0].innerText == "10 / 10"){
+            answer();
+            document.getElementById("next-question").click();
+        }else{
+            answer();
+            location.reload();
+        }
+    }
+}
+
+/*
 function total(){
     if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
         var buttonEls = document.getElementsByClassName("btn btn-primary game-button btn-lg")
         var button = buttonEls[0].setAttribute("id", "tryagain");
         document.getElementById("tryagain").click();
     }else{
-        if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
-            if(document.getElementById("lose") != undefined){
+            if(document.getElementsByClassName("mobile-padding-question") || document.getElementById("lose") === undefined){
+                setTimeout(random, 1000);
                 document.getElementById("lose").click();
-            }
-            if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
-                next()
-            }
-            else{
-            }
-        }
-        else{
-            var questionEls = document.getElementsByClassName("mobile-padding-question")
-            var question = questionEls[1].innerText;
-            answer();
-            if (questionEls[0].innerText == "10 / 10"){
-                answer()
-                setTimeout(next, 200);
-            }
-            else{
-                answer()
                 location.reload();
+            }else{
+                var questionEls = document.getElementsByClassName("mobile-padding-question");
+                if (questionEls[0].innerText == "10 / 10"){
+                    answer()
+                    setTimeout(next, 1000);
+                }else{
+                    answer()
+                    location.reload();
+                }
             }
+        
         }
     }
 }
+*/
