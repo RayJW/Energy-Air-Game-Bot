@@ -138,24 +138,30 @@ function question(){
 }
 
 function total(){
-    if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
-        if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
-            next()
+    if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
+        var buttonEls = document.getElementsByClassName("btn btn-primary game-button btn-lg")
+        var button = buttonEls[0].setAttribute("id", "tryagain");
+        document.getElementById("tryagain").click();
+    }else{
+        if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
+            if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
+                next()
+            }
+            else{
+            }
         }
         else{
-        }
-    }
-    else{
-        var questionEls = document.getElementsByClassName("mobile-padding-question")
-        var question = questionEls[1].innerText;
-        answer();
-        if (questionEls[0].innerText == "10 / 10"){
-            answer()
-            setTimeout(next, 2000);
-        }
-        else{
-            answer()
-            location.reload();
+            var questionEls = document.getElementsByClassName("mobile-padding-question")
+            var question = questionEls[1].innerText;
+            answer();
+            if (questionEls[0].innerText == "10 / 10"){
+                answer()
+                setTimeout(next, 200);
+            }
+            else{
+                answer()
+                location.reload();
+            }
         }
     }
 }
