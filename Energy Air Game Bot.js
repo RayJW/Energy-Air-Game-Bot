@@ -14,6 +14,7 @@ function next(){
     var buttonEls = document.getElementsByClassName("btn btn-primary game-button game-button-slot")
     var button = buttonEls[0].setAttribute("id", "next-step");
     document.getElementById("next-step").click();
+    reload();
 }
 
 function random(){
@@ -21,6 +22,10 @@ function random(){
     var buttonEls = document.getElementsByTagName("img");
     var button = buttonEls[x].setAttribute("id", "next-step");
     document.getElementById("next-step").click();
+    reload();
+}
+
+function reload(){
     location.reload();
 }
 
@@ -148,45 +153,24 @@ function question(){
 function total() {
     if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
         if(document.getElementsByClassName("circle col-xs-4 col-sm-3 col-md-4 col-lg-3") === undefined){
-            location.reload();
+            reload();
         }else{
-            setTimeout(next(), 1000);
+            setTimeout(next, 1000);
             setTimeout(random, 1000);
+            setTimeout(reload, 2000);
         }
     }else{
         var questionEls = document.getElementsByClassName("mobile-padding-question");
         if (questionEls[0].innerText == "10 / 10"){
             answer();
+            setTimeout(next, 1000);
+            setTimeout(random, 1000);
+            setTimeout(reload, 2000);
         }else{
             answer();
-            location.reload();
+            reload();
         }
+        reload();
     }
+    reload();
 }
-
-/*
-function total(){
-    if(document.getElementsByClassName("btn btn-primary game-button btn-lg")[0] === undefined){
-        var buttonEls = document.getElementsByClassName("btn btn-primary game-button btn-lg")
-        var button = buttonEls[0].setAttribute("id", "tryagain");
-        document.getElementById("tryagain").click();
-    }else{
-            if(document.getElementsByClassName("mobile-padding-question") || document.getElementById("lose") === undefined){
-                setTimeout(random, 1000);
-                document.getElementById("lose").click();
-                location.reload();
-            }else{
-                var questionEls = document.getElementsByClassName("mobile-padding-question");
-                if (questionEls[0].innerText == "10 / 10"){
-                    answer()
-                    setTimeout(next, 1000);
-                }else{
-                    answer()
-                    location.reload();
-                }
-            }
-
-        }
-    }
-}
-*/
