@@ -10,6 +10,8 @@
 
 window.addEventListener("load", total);
 
+setTimeout(total, 5000);
+
 function next(){
     var buttonEls = document.getElementsByClassName("btn btn-primary game-button game-button-slot")
     var button = buttonEls[0].setAttribute("id", "next-step");
@@ -151,26 +153,24 @@ function question(){
 }
 
 function total() {
-    if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
-        if(document.getElementsByClassName("circle col-xs-4 col-sm-3 col-md-4 col-lg-3") === undefined){
+    if(!document.getElementsByClassName("mobile-padding-question")[0]){
+        if(!document.getElementsByClassName("circle col-xs-4 col-sm-3 col-md-4 col-lg-3")){
             reload();
         }else{
-            setTimeout(next, 1000);
-            setTimeout(random, 1000);
+            setTimeout(next, 2000);
+            setTimeout(random, 2000);
             setTimeout(reload, 2000);
         }
     }else{
         var questionEls = document.getElementsByClassName("mobile-padding-question");
         if (questionEls[0].innerText == "10 / 10"){
             answer();
-            setTimeout(next, 1000);
-            setTimeout(random, 1000);
+            setTimeout(next, 2000);
+            setTimeout(random, 2000);
             setTimeout(reload, 2000);
         }else{
             answer();
             reload();
         }
-        reload();
     }
-    reload();
 }
