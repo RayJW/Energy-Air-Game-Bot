@@ -81,7 +81,7 @@ function answer() {
 }
 
 function question(){
-    var questionEls = document.getElementsByClassName("mobile-padding-question")
+    var questionEls = document.getElementsByClassName("mobile-padding-question");
     var question = questionEls[1].innerText;
     var x = 0;
     var questions = [
@@ -146,7 +146,7 @@ function question(){
 }
 
 function total() {
-    if(document.getElementsByClassName("mobile-padding-question") === undefined){
+    if(document.getElementsByClassName("mobile-padding-question")[0] === undefined){
         if(document.getElementsByClassName("circle col-xs-4 col-sm-3 col-md-4 col-lg-3") === undefined){
             location.reload();
         }else{
@@ -157,7 +157,6 @@ function total() {
         var questionEls = document.getElementsByClassName("mobile-padding-question");
         if (questionEls[0].innerText == "10 / 10"){
             answer();
-            document.getElementById("next-question").click();
         }else{
             answer();
             location.reload();
@@ -186,7 +185,7 @@ function total(){
                     location.reload();
                 }
             }
-        
+
         }
     }
 }
