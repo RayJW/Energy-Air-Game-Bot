@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Energy Air Game Bot
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot
-// @version      1.0
+// @version      1.2
 // @description  Automate the Energy Air Game
 // @author       RayJW, Svenwas3f
 // @match        https://game.energy.ch/
@@ -59,7 +59,7 @@ function answer() {
         "60",
         "Dimitri Vegas & Like Mike",
         "Deutschland",
-        "Zürich",
+        "Bern",
         "Pegasus",
         "Der Ex von Audrey (Mila Kunis)",
         "Privatjet",
