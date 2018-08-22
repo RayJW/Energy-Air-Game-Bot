@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Energy Air Game Bot
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot
-// @version      1.2
+// @version      1.3
 // @description  Automate the Energy Air Game
 // @author       RayJW, Svenwas3f
 // @match        https://game.energy.ch/
@@ -16,7 +16,6 @@ function next(){
     var buttonEls = document.getElementsByClassName("btn btn-primary game-button game-button-slot")
     var button = buttonEls[0].setAttribute("id", "next-step");
     document.getElementById("next-step").click();
-    reload();
 }
 
 function random(){
@@ -24,7 +23,6 @@ function random(){
     var buttonEls = document.getElementsByTagName("img");
     var button = buttonEls[x].setAttribute("id", "next-step");
     document.getElementById("next-step").click();
-    reload();
 }
 
 function reload(){
@@ -76,7 +74,7 @@ function answer() {
         "Einen USB-Stick mit vertraulichen Informationen",
         "Sein Mami",
         "Für Ingwer & Ewig",
-        "Ashton Kutscher",
+        "Ashton Kutcher",
         "250",
         "2014",
         "Kodaline",
@@ -159,7 +157,7 @@ function total() {
         }else{
             setTimeout(next, 2000);
             setTimeout(random, 2000);
-            setTimeout(reload, 2000);
+            setTimeout(reload, 3500);
         }
     }else{
         var questionEls = document.getElementsByClassName("mobile-padding-question");
@@ -167,7 +165,7 @@ function total() {
             answer();
             setTimeout(next, 2000);
             setTimeout(random, 2000);
-            setTimeout(reload, 2000);
+            setTimeout(reload, 3500);
         }else{
             answer();
             reload();
