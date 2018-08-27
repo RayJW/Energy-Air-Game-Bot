@@ -87,7 +87,7 @@ function answer() {
         "Anke Engelke",
         "Shootingstar Berlinale 2018",
         "Pink",
-        "Cyril",
+        "Cyril"
     ];
     var x = question();
     document.getElementById(answers[x]).click();
@@ -155,7 +155,7 @@ function question(){
         "Wer spielt die Mutter von Cyril?",
         "Mit welchem Preis wurde der Nachwuchsstar Luna Wedler dieses Jahr ausgezeichnet?",
         "Welche Farbe haben die Haare des Social Media Stars Julia Beautx im Film?",
-        "Welcher Schauspieler/Rapper trägt im Film eine goldene Maske?",
+        "Welcher Schauspieler/Rapper trägt im Film eine goldene Maske?"
     ];
     while (x < 60) {
         if (question == questions[x]) {
