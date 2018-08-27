@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Energy Air Game Bot
 // @namespace    https://github.com/RayJW/Energy-Air-Game-Bot
-// @version      1.3
+// @version      1.4
 // @description  Automate the Energy Air Game
 // @author       RayJW, Svenwas3f
 // @match        https://game.energy.ch/
@@ -78,7 +78,16 @@ function answer() {
         "250",
         "2014",
         "Kodaline",
-        "Gamen"
+        "Gamen",
+        "Luna Wedler",
+        "6. September 2018",
+        "Seine grosse Nase",
+        "Berlin",
+        "Texte schreiben und rappen",
+        "Anke Engelke",
+        "Shootingstar Berlinale 2018",
+        "Pink",
+        "Cyril",
     ];
     var x = question();
     document.getElementById(answers[x]).click();
@@ -104,7 +113,7 @@ function question(){
         "Wie viele Energy Air Tickets werden verlost?",
         "Wann beginnt das Energy Air 2018?",
         "Das NRJ-Gefährt ist ein…",
-        "Was passiert, wenn es am Eventtag regnet?",
+       "Was passiert, wenn es am Eventtag regnet?",
         "Wo erfährst du immer die neusten Infos rund um das Energy Air?",
         "Energy Air Tickets kann man…",
         "Wie schwer ist die Energy Air Bühne?",
@@ -137,7 +146,16 @@ function question(){
         "Wie viele Spotlights gibt es am Energy Air?",
         "Wann fand das Energy Air zum ersten Mal statt?",
         "Wer war der letzte Act am Energy Air 2017?",
-        "Was ist Audreys Lieblingsbeschäftigung?"
+        "Was ist Audreys Lieblingsbeschäftigung?",
+        "Welcher Schweizer Shootingstar spielt in DAS SCHÖNSTE MÄDCHEN DER WELT die Hauptrolle?" ,
+        "Wann ist der offizielle Filmstart von DAS SCHÖNSTE MÄDCHEN DER WELT in den Schweizer Kinos?",
+        "Was ist Cyrils (Aaron Hilmer) Markenzeichen im Film?",
+        "Wohin führt die Klassenfahrt?",
+        "Was ist Cyrils besondere Begabung?",
+        "Wer spielt die Mutter von Cyril?",
+        "Mit welchem Preis wurde der Nachwuchsstar Luna Wedler dieses Jahr ausgezeichnet?",
+        "Welche Farbe haben die Haare des Social Media Stars Julia Beautx im Film?",
+        "Welcher Schauspieler/Rapper trägt im Film eine goldene Maske?",
     ];
     while (x < 60) {
         if (question == questions[x]) {
